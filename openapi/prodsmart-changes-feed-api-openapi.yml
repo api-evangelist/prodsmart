@@ -1,0 +1,39 @@
+openapi: 3.0.3
+info:
+  title: Autodesk Fusion Operations (Prodsmart) API v1 Authorization Changes Feed API
+  version: v1
+  description: REST API for Autodesk Fusion Operations (formerly Prodsmart), a cloud manufacturing execution / production management platform for small and mid-sized manufacturers. This v1 surface is documented publicly and is marked DEPRECATED by Autodesk, which recommends migrating to the v2 API on Autodesk Platform Services (APS). Authentication is HTTP Basic (API Key as username, API Secret as password) which mints a 2-hour token; most endpoints also accept an access_token query parameter. Requests and responses are JSON; dates are ISO 8601. Rate limit is 120 requests per minute per company.
+  contact:
+    name: Autodesk Fusion Operations
+    url: https://help.fusionoperations.autodesk.com/
+  x-rate-limit: 120 requests per minute per company
+  x-deprecated-notice: v1 is deprecated; migrate to v2 at https://aps.autodesk.com/en/docs/fusion-operations/v2
+servers:
+- url: https://fusionoperations.autodesk.com
+  description: Production (Autodesk Fusion Operations)
+security:
+- basicAuth: []
+- accessToken: []
+tags:
+- name: Changes Feed
+paths:
+  /api/v1/changes-feed-channels/:
+    get:
+      tags:
+      - Changes Feed
+      operationId: listChangesFeedChannels
+      summary: Access changes feed channels
+      responses:
+        '200':
+          description: OK
+components:
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+      description: HTTP Basic authentication using the API Key as username and API Secret as password. Used to mint a token valid for 2 hours.
+    accessToken:
+      type: apiKey
+      in: query
+      name: access_token
+      description: Token passed as the access_token query parameter on most endpoints.
