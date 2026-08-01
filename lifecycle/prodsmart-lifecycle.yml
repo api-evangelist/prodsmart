@@ -1,0 +1,21 @@
+generated: '2026-07-20'
+method: searched
+source: https://help.fusionoperations.autodesk.com/en/articles/8106718-api-documentation
+versioning:
+  scheme: uri-path
+  current: v2
+  legacy: v1
+  v2_docs: https://aps.autodesk.com/en/docs/fusion-operations/v2
+  v1_docs: https://fusionoperations.autodesk.com/api-documentation
+deprecation:
+  policy: v1 is deprecated; Autodesk recommends migrating to v2 on Autodesk Platform Services (APS).
+  deprecated_version: v1
+  successor: v2
+  docs: https://aps.autodesk.com/en/docs/fusion-operations/v2
+deprecated_operations:
+  - openapi/prodsmart-v1-openapi.yml#getAuthorization
+  - openapi/prodsmart-v1-openapi.yml#createAuthorization
+  - openapi/prodsmart-v1-openapi.yml#deleteAuthorization
+status_page:
+  found: false
+  notes: No product-specific public status page discovered for Fusion Operations.

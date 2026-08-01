@@ -1,0 +1,22 @@
+# Autodesk Fusion Operations (Prodsmart)
+
+> Cloud manufacturing execution / production management platform for small and mid-sized manufacturers (production, inventory, sales, purchasing, quality, scheduling, maintenance and analytics). Formerly Prodsmart; acquired by Autodesk in 2021 and rebranded Autodesk Fusion Operations. Exposes a documented REST API (v1 legacy, v2 on Autodesk Platform Services), webhooks and a changes feed.
+
+## APIs
+- [Fusion Operations API v2 (APS)](https://aps.autodesk.com/en/docs/fusion-operations/v2): Current API on Autodesk Platform Services.
+- [Fusion Operations API v1 (legacy, deprecated)](https://fusionoperations.autodesk.com/api-documentation): Documented v1 REST reference. Base https://fusionoperations.autodesk.com, paths under /api/v1/.
+
+## Specs
+- [OpenAPI v1 (generated)](openapi/prodsmart-v1-openapi.yml): OpenAPI transcribed from the public v1 reference (paths/methods/auth only).
+- [Webhooks / event surface](asyncapi/prodsmart-webhooks.yml): Webhook events + Changes Feed Channels.
+
+## Docs
+- [API documentation overview](https://help.fusionoperations.autodesk.com/en/articles/8106718-api-documentation)
+- [Getting API credentials](https://help.fusionoperations.autodesk.com/en/articles/7257724-autodesk-fusion-operations-api)
+- [Help center](https://help.fusionoperations.autodesk.com/)
+- [2025 release notes](https://help.fusionoperations.autodesk.com/en/articles/13289172-2025-release-notes)
+
+## Conventions
+- Auth: HTTP Basic (API Key/Secret) mints a 2-hour token; access_token query param accepted.
+- Media type: application/json. Dates: ISO 8601. Rate limit: 120 requests/minute per company.
+- Integrations: Webhooks, Changes Feed Channels, Zapier, Power BI.

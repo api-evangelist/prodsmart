@@ -1,0 +1,28 @@
+generated: '2026-07-20'
+method: searched
+source: https://help.fusionoperations.autodesk.com/en/articles/7257724-autodesk-fusion-operations-api
+docs: https://fusionoperations.autodesk.com/api-documentation
+summary:
+  types: [http, apiKey]
+  http_schemes: [basic]
+  api_key_in: [query]
+  oauth2_flows: []
+  notes: >-
+    v1 uses HTTP Basic auth (API Key = username, API Secret = password) to mint a
+    bearer token valid for 2 hours; most endpoints also accept the token via an
+    access_token query parameter. API credentials are requested from the company
+    profile ("Request an API key"). An API key is mandatory to activate Webhooks,
+    Zapier and Changes Feed Channel integrations. The current v2 API is hosted on
+    Autodesk Platform Services (APS) and follows APS auth.
+schemes:
+  - name: basicAuth
+    type: http
+    scheme: basic
+    description: API Key as username, API Secret as password; mints a 2-hour token.
+    sources: [openapi/prodsmart-v1-openapi.yml]
+  - name: accessToken
+    type: apiKey
+    in: query
+    parameter: access_token
+    description: Token passed as the access_token query parameter on most endpoints.
+    sources: [openapi/prodsmart-v1-openapi.yml]

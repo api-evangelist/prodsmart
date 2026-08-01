@@ -1,0 +1,39 @@
+generated: '2026-07-20'
+method: searched
+type: Webhooks
+source: https://help.fusionoperations.autodesk.com/en/articles/7257724-autodesk-fusion-operations-api
+docs: https://fusionoperations.autodesk.com/api-documentation
+webhooks_docs: https://fusionoperations.autodesk.com/api-documentation
+summary: >-
+  Autodesk Fusion Operations (Prodsmart) exposes an event surface via Webhooks
+  and Changes Feed Channels. An API key is required to activate them. Webhooks
+  fire on create/update of core manufacturing entities; the Changes Feed Channels
+  endpoint provides a pollable change stream. No AsyncAPI document is published by
+  the provider (surface captured from the documented webhook/integration reference).
+delivery:
+  mechanisms:
+    - name: Webhooks
+      style: HTTP callback
+    - name: Changes Feed Channels
+      style: pollable change feed
+      operation: openapi/prodsmart-v1-openapi.yml#listChangesFeedChannels
+  activation: Requires an API key (requested from the company profile).
+events:
+  # Webhook event families documented across the API reference and 2025 release notes.
+  - entity: Sales Orders
+    triggers: [created, updated]
+  - entity: Purchase Orders
+    triggers: [created, updated]
+  - entity: Production Orders
+    triggers: [created, updated]
+  - entity: Clients
+    triggers: [created, updated]
+  - entity: Suppliers
+    triggers: [created, updated]
+  - entity: Inventory Movements
+    triggers: [received-at-warehouse]
+integrations:
+  - name: Zapier
+    detail: Triggers and actions for Sales Orders, Purchase Orders, Clients, Suppliers and more.
+  - name: Power BI
+    detail: Data retrieval connector built on the API.

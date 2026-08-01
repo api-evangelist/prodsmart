@@ -1,0 +1,57 @@
+generated: '2026-07-20'
+method: derived
+source: openapi/prodsmart-v1-openapi.yml
+notes: >-
+  Entity graph derived from the documented v1 API resource surface. Relationships
+  reflect the manufacturing domain as documented (production orders build products,
+  sales/purchase orders reference clients/suppliers, products carry a BoM). Field-
+  level id references are not published in the public reference, so via-field names
+  are given where documented and omitted otherwise.
+entities:
+  - name: SalesOrder
+    operations: [createSalesOrder, listSalesOrders, getSalesOrder, updateSalesOrder, deleteSalesOrder]
+  - name: PurchaseOrder
+    operations: [createPurchaseOrder, listPurchaseOrders, getPurchaseOrder, updatePurchaseOrder, deletePurchaseOrder]
+  - name: Client
+    operations: [createClient, listClients, getClient, updateClient, deleteClient]
+  - name: Supplier
+    operations: [createSupplier, listSuppliers, getSupplier, updateSupplier, deleteSupplier]
+  - name: ProductionOrder
+    operations: [createProductionOrder, listProductionOrders, getProductionOrder, updateProductionOrder, deleteProductionOrder]
+  - name: Product
+    operations: [createProduct, listProducts, getProduct, updateProduct, deleteProduct, updateProductBom]
+  - name: ProductFamily
+    operations: [createProductFamily, listProductFamilies, updateProductFamily, deleteProductFamily]
+  - name: Machine
+    operations: [updateMachineCounter, updateMachineDowntime]
+  - name: Production
+    operations: [createProduction, listProductions, updateProduction, deleteProduction]
+  - name: InventoryMovement
+    operations: [createInventoryMovement, listInventoryMovements, getInventoryMovement, updateInventoryMovement, deleteInventoryMovement]
+  - name: TaskDuration
+    operations: [createTaskDuration, listTaskDurations, getTaskDuration, updateTaskDuration, deleteTaskDuration]
+relationships:
+  - from: SalesOrder
+    to: Client
+    type: belongs_to
+  - from: PurchaseOrder
+    to: Supplier
+    type: belongs_to
+  - from: ProductionOrder
+    to: Product
+    type: belongs_to
+  - from: Product
+    to: ProductFamily
+    type: belongs_to
+  - from: Product
+    to: Product
+    type: has_many
+    via: bom
+    note: Bill of Materials — a product is composed of other products/materials.
+  - from: Production
+    to: ProductionOrder
+    type: belongs_to
+  - from: SalesOrder
+    to: ProductionOrder
+    type: has_many
+    note: Production Orders can be created from Sales Orders.

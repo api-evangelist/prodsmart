@@ -1,0 +1,32 @@
+generated: '2026-07-20'
+method: searched
+source: https://help.fusionoperations.autodesk.com/en/articles/13289172-2025-release-notes
+docs: https://help.fusionoperations.autodesk.com/en/articles/10058432-release-notes
+scheme: date-based
+current_version: v2
+notes: >-
+  Autodesk Fusion Operations publishes dated release notes (no semantic version
+  numbers). Entries below are the API-relevant highlights from the 2025 notes;
+  the live release-notes articles are the source of truth for the full window.
+entries:
+  - date: '2025-10-09'
+    highlights:
+      - Added support for defining the Product Standard Unit of Measurement via API.
+  - date: '2025-07-03'
+    highlights:
+      - Added file interactions via API (create, list, retrieve, update, remove) for Sales Orders, Purchase Orders, Production Orders, Products.
+  - date: '2025-05-22'
+    highlights:
+      - Updated Webhooks documentation.
+  - date: '2025-05-13'
+    highlights:
+      - Shipping field added to Production Order API create/update endpoints.
+  - date: '2025-05-07'
+    highlights:
+      - New API Documentation section: Sample Integration Workflows.
+  - date: '2025-02-13'
+    breaking: false
+    highlights:
+      - New endpoints for Sales Orders and Purchase Orders supporting wider field sets and shipping/receiving data with post-movement edit capability.
+      - Webhooks created for Sales Orders, Purchase Orders, Clients, and Suppliers with improved inventory update triggering.
+      - Zapier expanded with additional triggers and actions.

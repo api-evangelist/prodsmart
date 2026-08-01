@@ -1,0 +1,19 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for Autodesk Fusion Operations (Prodsmart)
+  version: 1.0.0
+extends: openapi/prodsmart-v1-openapi.yml
+actions:
+  - target: $.info
+    update:
+      x-apievangelist-provider: prodsmart
+      x-apievangelist-product: Autodesk Fusion Operations (formerly Prodsmart)
+      x-apievangelist-category: Manufacturing Execution System
+      x-apievangelist-rate-limit: 120 requests per minute per company
+      x-apievangelist-lifecycle: v1 deprecated; migrate to v2 on Autodesk Platform Services
+  - target: $.info
+    update:
+      x-apievangelist-events:
+        webhooks: true
+        changes_feed: true
+        ref: asyncapi/prodsmart-webhooks.yml

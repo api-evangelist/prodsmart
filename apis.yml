@@ -1,7 +1,30 @@
 aid: prodsmart
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/prodsmart.png
 name: Prodsmart
-description: Prodsmart is a company surfaced as a portfolio company of 500-global and added to the API
-  Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Prodsmart is a cloud manufacturing execution system (MES) and production
+  management platform for small and mid-sized manufacturers, covering production
+  tracking, inventory, sales and purchasing, quality, scheduling and material
+  requirements, asset maintenance, and shop-floor analytics across mobile and
+  desktop. Founded as Prodsmart and acquired by Autodesk in 2021, it is now
+  offered as Autodesk Fusion Operations. It exposes a documented REST API (a
+  deprecated v1 surface at fusionoperations.autodesk.com/api/v1 and a current v2
+  API on Autodesk Platform Services), authenticated with an API Key/Secret via
+  HTTP Basic that mints a 2-hour token, plus webhooks, a Changes Feed, and Zapier
+  and Power BI integrations. This profile was surfaced as a portfolio company of
+  500 Global and enriched by the API Evangelist pipeline.
 url: https://raw.githubusercontent.com/api-evangelist/prodsmart/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,10 +34,273 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
-apis: []
+- Manufacturing
+- Manufacturing Execution System
+- Production Management
+- Inventory
+- Shop Floor
+- Autodesk
+- Industry 4.0
+apis:
+- aid: prodsmart:prodsmart-authorization-api
+  name: Prodsmart Authorization API
+  description: The Authorization API from Prodsmart — 1 operation(s) for authorization.
+  humanURL: https://fusionoperations.autodesk.com/api-documentation
+  baseURL: https://fusionoperations.autodesk.com
+  tags:
+  - Authorization
+  properties:
+  - type: OpenAPI
+    url: openapi/prodsmart-authorization-api-openapi.yml
+  - type: Authentication
+    url: authentication/prodsmart-authentication.yml
+  - type: Webhooks
+    url: asyncapi/prodsmart-webhooks.yml
+  - type: DataModel
+    url: data-model/prodsmart-data-model.yml
+- aid: prodsmart:prodsmart-changes-feed-api
+  name: Prodsmart Changes Feed API
+  description: The Changes Feed API from Prodsmart — 1 operation(s) for changes feed.
+  humanURL: https://fusionoperations.autodesk.com/api-documentation
+  baseURL: https://fusionoperations.autodesk.com
+  tags:
+  - Changes Feed
+  properties:
+  - type: OpenAPI
+    url: openapi/prodsmart-changes-feed-api-openapi.yml
+  - type: Authentication
+    url: authentication/prodsmart-authentication.yml
+  - type: Webhooks
+    url: asyncapi/prodsmart-webhooks.yml
+  - type: DataModel
+    url: data-model/prodsmart-data-model.yml
+- aid: prodsmart:prodsmart-clients-api
+  name: Prodsmart Clients API
+  description: The Clients API from Prodsmart — 2 operation(s) for clients.
+  humanURL: https://fusionoperations.autodesk.com/api-documentation
+  baseURL: https://fusionoperations.autodesk.com
+  tags:
+  - Clients
+  properties:
+  - type: OpenAPI
+    url: openapi/prodsmart-clients-api-openapi.yml
+  - type: Authentication
+    url: authentication/prodsmart-authentication.yml
+  - type: Webhooks
+    url: asyncapi/prodsmart-webhooks.yml
+  - type: DataModel
+    url: data-model/prodsmart-data-model.yml
+- aid: prodsmart:prodsmart-downtime-api
+  name: Prodsmart Downtime API
+  description: The Downtime API from Prodsmart — 1 operation(s) for downtime.
+  humanURL: https://fusionoperations.autodesk.com/api-documentation
+  baseURL: https://fusionoperations.autodesk.com
+  tags:
+  - Downtime
+  properties:
+  - type: OpenAPI
+    url: openapi/prodsmart-downtime-api-openapi.yml
+  - type: Authentication
+    url: authentication/prodsmart-authentication.yml
+  - type: Webhooks
+    url: asyncapi/prodsmart-webhooks.yml
+  - type: DataModel
+    url: data-model/prodsmart-data-model.yml
+- aid: prodsmart:prodsmart-inventory-api
+  name: Prodsmart Inventory API
+  description: The Inventory API from Prodsmart — 3 operation(s) for inventory.
+  humanURL: https://fusionoperations.autodesk.com/api-documentation
+  baseURL: https://fusionoperations.autodesk.com
+  tags:
+  - Inventory
+  properties:
+  - type: OpenAPI
+    url: openapi/prodsmart-inventory-api-openapi.yml
+  - type: Authentication
+    url: authentication/prodsmart-authentication.yml
+  - type: Webhooks
+    url: asyncapi/prodsmart-webhooks.yml
+  - type: DataModel
+    url: data-model/prodsmart-data-model.yml
+- aid: prodsmart:prodsmart-machines-api
+  name: Prodsmart Machines API
+  description: The Machines API from Prodsmart — 2 operation(s) for machines.
+  humanURL: https://fusionoperations.autodesk.com/api-documentation
+  baseURL: https://fusionoperations.autodesk.com
+  tags:
+  - Machines
+  properties:
+  - type: OpenAPI
+    url: openapi/prodsmart-machines-api-openapi.yml
+  - type: Authentication
+    url: authentication/prodsmart-authentication.yml
+  - type: Webhooks
+    url: asyncapi/prodsmart-webhooks.yml
+  - type: DataModel
+    url: data-model/prodsmart-data-model.yml
+- aid: prodsmart:prodsmart-product-families-api
+  name: Prodsmart Product Families API
+  description: The Product Families API from Prodsmart — 2 operation(s) for product families.
+  humanURL: https://fusionoperations.autodesk.com/api-documentation
+  baseURL: https://fusionoperations.autodesk.com
+  tags:
+  - Product Families
+  properties:
+  - type: OpenAPI
+    url: openapi/prodsmart-product-families-api-openapi.yml
+  - type: Authentication
+    url: authentication/prodsmart-authentication.yml
+  - type: Webhooks
+    url: asyncapi/prodsmart-webhooks.yml
+  - type: DataModel
+    url: data-model/prodsmart-data-model.yml
+- aid: prodsmart:prodsmart-production-orders-api
+  name: Prodsmart Production Orders API
+  description: The Production Orders API from Prodsmart — 6 operation(s) for production orders.
+  humanURL: https://fusionoperations.autodesk.com/api-documentation
+  baseURL: https://fusionoperations.autodesk.com
+  tags:
+  - Production Orders
+  properties:
+  - type: OpenAPI
+    url: openapi/prodsmart-production-orders-api-openapi.yml
+  - type: Authentication
+    url: authentication/prodsmart-authentication.yml
+  - type: Webhooks
+    url: asyncapi/prodsmart-webhooks.yml
+  - type: DataModel
+    url: data-model/prodsmart-data-model.yml
+- aid: prodsmart:prodsmart-productions-api
+  name: Prodsmart Productions API
+  description: The Productions API from Prodsmart — 2 operation(s) for productions.
+  humanURL: https://fusionoperations.autodesk.com/api-documentation
+  baseURL: https://fusionoperations.autodesk.com
+  tags:
+  - Productions
+  properties:
+  - type: OpenAPI
+    url: openapi/prodsmart-productions-api-openapi.yml
+  - type: Authentication
+    url: authentication/prodsmart-authentication.yml
+  - type: Webhooks
+    url: asyncapi/prodsmart-webhooks.yml
+  - type: DataModel
+    url: data-model/prodsmart-data-model.yml
+- aid: prodsmart:prodsmart-products-api
+  name: Prodsmart Products API
+  description: The Products API from Prodsmart — 5 operation(s) for products.
+  humanURL: https://fusionoperations.autodesk.com/api-documentation
+  baseURL: https://fusionoperations.autodesk.com
+  tags:
+  - Products
+  properties:
+  - type: OpenAPI
+    url: openapi/prodsmart-products-api-openapi.yml
+  - type: Authentication
+    url: authentication/prodsmart-authentication.yml
+  - type: Webhooks
+    url: asyncapi/prodsmart-webhooks.yml
+  - type: DataModel
+    url: data-model/prodsmart-data-model.yml
+- aid: prodsmart:prodsmart-punch-clock-api
+  name: Prodsmart Punch Clock API
+  description: The Punch Clock API from Prodsmart — 1 operation(s) for punch clock.
+  humanURL: https://fusionoperations.autodesk.com/api-documentation
+  baseURL: https://fusionoperations.autodesk.com
+  tags:
+  - Punch Clock
+  properties:
+  - type: OpenAPI
+    url: openapi/prodsmart-punch-clock-api-openapi.yml
+  - type: Authentication
+    url: authentication/prodsmart-authentication.yml
+  - type: Webhooks
+    url: asyncapi/prodsmart-webhooks.yml
+  - type: DataModel
+    url: data-model/prodsmart-data-model.yml
+- aid: prodsmart:prodsmart-purchase-orders-api
+  name: Prodsmart Purchase Orders API
+  description: The Purchase Orders API from Prodsmart — 4 operation(s) for purchase orders.
+  humanURL: https://fusionoperations.autodesk.com/api-documentation
+  baseURL: https://fusionoperations.autodesk.com
+  tags:
+  - Purchase Orders
+  properties:
+  - type: OpenAPI
+    url: openapi/prodsmart-purchase-orders-api-openapi.yml
+  - type: Authentication
+    url: authentication/prodsmart-authentication.yml
+  - type: Webhooks
+    url: asyncapi/prodsmart-webhooks.yml
+  - type: DataModel
+    url: data-model/prodsmart-data-model.yml
+- aid: prodsmart:prodsmart-reports-api
+  name: Prodsmart Reports API
+  description: The Reports API from Prodsmart — 1 operation(s) for reports.
+  humanURL: https://fusionoperations.autodesk.com/api-documentation
+  baseURL: https://fusionoperations.autodesk.com
+  tags:
+  - Reports
+  properties:
+  - type: OpenAPI
+    url: openapi/prodsmart-reports-api-openapi.yml
+  - type: Authentication
+    url: authentication/prodsmart-authentication.yml
+  - type: Webhooks
+    url: asyncapi/prodsmart-webhooks.yml
+  - type: DataModel
+    url: data-model/prodsmart-data-model.yml
+- aid: prodsmart:prodsmart-sales-orders-api
+  name: Prodsmart Sales Orders API
+  description: The Sales Orders API from Prodsmart — 4 operation(s) for sales orders.
+  humanURL: https://fusionoperations.autodesk.com/api-documentation
+  baseURL: https://fusionoperations.autodesk.com
+  tags:
+  - Sales Orders
+  properties:
+  - type: OpenAPI
+    url: openapi/prodsmart-sales-orders-api-openapi.yml
+  - type: Authentication
+    url: authentication/prodsmart-authentication.yml
+  - type: Webhooks
+    url: asyncapi/prodsmart-webhooks.yml
+  - type: DataModel
+    url: data-model/prodsmart-data-model.yml
+- aid: prodsmart:prodsmart-suppliers-api
+  name: Prodsmart Suppliers API
+  description: The Suppliers API from Prodsmart — 2 operation(s) for suppliers.
+  humanURL: https://fusionoperations.autodesk.com/api-documentation
+  baseURL: https://fusionoperations.autodesk.com
+  tags:
+  - Suppliers
+  properties:
+  - type: OpenAPI
+    url: openapi/prodsmart-suppliers-api-openapi.yml
+  - type: Authentication
+    url: authentication/prodsmart-authentication.yml
+  - type: Webhooks
+    url: asyncapi/prodsmart-webhooks.yml
+  - type: DataModel
+    url: data-model/prodsmart-data-model.yml
+- aid: prodsmart:prodsmart-task-durations-api
+  name: Prodsmart Task Durations API
+  description: The Task Durations API from Prodsmart — 2 operation(s) for task durations.
+  humanURL: https://fusionoperations.autodesk.com/api-documentation
+  baseURL: https://fusionoperations.autodesk.com
+  tags:
+  - Task Durations
+  properties:
+  - type: OpenAPI
+    url: openapi/prodsmart-task-durations-api-openapi.yml
+  - type: Authentication
+    url: authentication/prodsmart-authentication.yml
+  - type: Webhooks
+    url: asyncapi/prodsmart-webhooks.yml
+  - type: DataModel
+    url: data-model/prodsmart-data-model.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -23,3 +309,38 @@ maintainers:
 common:
 - type: Website
   url: https://prodsmart.com
+- type: DeveloperPortal
+  url: https://help.fusionoperations.autodesk.com/
+- type: Documentation
+  url: https://help.fusionoperations.autodesk.com/en/articles/8106718-api-documentation
+- type: APIReference
+  url: https://fusionoperations.autodesk.com/api-documentation
+- type: GettingStarted
+  url: https://help.fusionoperations.autodesk.com/en/articles/7257724-autodesk-fusion-operations-api
+- type: Support
+  url: https://help.fusionoperations.autodesk.com/
+- type: Authentication
+  url: authentication/prodsmart-authentication.yml
+- type: Conventions
+  url: conventions/prodsmart-conventions.yml
+- type: ChangeLog
+  url: changelog/prodsmart-changelog.yml
+- type: Lifecycle
+  url: lifecycle/prodsmart-lifecycle.yml
+- type: Deprecation
+  url: lifecycle/prodsmart-lifecycle.yml
+- type: Webhooks
+  url: asyncapi/prodsmart-webhooks.yml
+- type: MCPServer
+  url: mcp/prodsmart-mcp.yml
+- type: LLMsTxt
+  url: llms/prodsmart-llms.txt
+- type: DomainSecurity
+  url: security/prodsmart-domain-security.yml
+- type: DataModel
+  url: data-model/prodsmart-data-model.yml
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 11
+  pass: local-v1

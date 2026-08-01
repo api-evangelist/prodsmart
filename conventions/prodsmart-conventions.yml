@@ -1,0 +1,33 @@
+generated: '2026-07-20'
+method: searched
+source: https://fusionoperations.autodesk.com/api-documentation
+docs: https://help.fusionoperations.autodesk.com/en/articles/8106718-api-documentation
+conventions:
+  authentication:
+    style: http-basic + token
+    detail: API Key/Secret via Basic auth mints a 2-hour token; access_token query param accepted.
+    ref: authentication/prodsmart-authentication.yml
+  media_type:
+    request: application/json
+    response: application/json
+  date_format:
+    standard: ISO 8601
+    example: "YYYY-MM-DDTHH:MM:SSZ"
+  versioning:
+    scheme: uri-path
+    current: v2
+    legacy: v1 (deprecated)
+    ref: lifecycle/prodsmart-lifecycle.yml
+  rate_limiting:
+    limit: 120 requests per minute per company
+    scope: per company
+  idempotency:
+    supported: false
+    notes: The provider does not document an idempotency-key mechanism for v1.
+  pagination:
+    documented: unknown
+    notes: List endpoints exist; pagination parameters are not published in the public reference.
+  events:
+    webhooks: true
+    changes_feed: true
+    ref: asyncapi/prodsmart-webhooks.yml
