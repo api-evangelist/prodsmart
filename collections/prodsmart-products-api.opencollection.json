@@ -1,0 +1,224 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Autodesk Fusion Operations (Prodsmart) API v1 Authorization Products API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Products",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List products",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://fusionoperations.autodesk.com/api/v1/products/"
+          },
+          "docs": "List products"
+        },
+        {
+          "info": {
+            "name": "Create product",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://fusionoperations.autodesk.com/api/v1/products/"
+          },
+          "docs": "Create product"
+        },
+        {
+          "info": {
+            "name": "Retrieve product",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://fusionoperations.autodesk.com/api/v1/products/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve product"
+        },
+        {
+          "info": {
+            "name": "Update product",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://fusionoperations.autodesk.com/api/v1/products/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update product"
+        },
+        {
+          "info": {
+            "name": "Delete product",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://fusionoperations.autodesk.com/api/v1/products/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete product"
+        },
+        {
+          "info": {
+            "name": "List product files",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://fusionoperations.autodesk.com/api/v1/products/:id/files",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List product files"
+        },
+        {
+          "info": {
+            "name": "Create product file",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://fusionoperations.autodesk.com/api/v1/products/:id/files",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Create product file"
+        },
+        {
+          "info": {
+            "name": "Retrieve product file",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://fusionoperations.autodesk.com/api/v1/products/:id/files/:file_id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "file_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve product file"
+        },
+        {
+          "info": {
+            "name": "Update product file",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://fusionoperations.autodesk.com/api/v1/products/:id/files/:file_id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "file_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update product file"
+        },
+        {
+          "info": {
+            "name": "Remove product file",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://fusionoperations.autodesk.com/api/v1/products/:id/files/:file_id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "file_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Remove product file"
+        },
+        {
+          "info": {
+            "name": "Update Bill of Materials",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://fusionoperations.autodesk.com/api/v1/products/:id/bom",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update Bill of Materials"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

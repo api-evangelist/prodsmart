@@ -1,0 +1,116 @@
+{
+  "item": [
+    {
+      "id": "3af5b6cd-fff4-4f7f-a50c-6e7af785387b",
+      "name": "Downtime",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "67adb4ad-68a3-46eb-b052-5dc0c7d10500",
+          "name": "List downtimes",
+          "request": {
+            "name": "List downtimes",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "downtimes",
+                ""
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "5e5f6483-8628-47c3-84e5-eacac66bc587",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "downtimes",
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://fusionoperations.autodesk.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "basic",
+    "basic": [
+      {
+        "key": "username",
+        "value": "{{basicAuthUsername}}"
+      },
+      {
+        "key": "password",
+        "value": "{{basicAuthPassword}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "971d8940-701d-4002-acc1-fc3b2374eefe",
+    "name": "Autodesk Fusion Operations (Prodsmart) API v1 Authorization Downtime API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "REST API for Autodesk Fusion Operations (formerly Prodsmart), a cloud manufacturing execution / production management platform for small and mid-sized manufacturers. This v1 surface is documented publicly and is marked DEPRECATED by Autodesk, which recommends migrating to the v2 API on Autodesk Platform Services (APS). Authentication is HTTP Basic (API Key as username, API Secret as password) which mints a 2-hour token; most endpoints also accept an access_token query parameter. Requests and responses are JSON; dates are ISO 8601. Rate limit is 120 requests per minute per company.\n\nContact Support:\n Name: Autodesk Fusion Operations",
+      "type": "text/plain"
+    }
+  }
+}

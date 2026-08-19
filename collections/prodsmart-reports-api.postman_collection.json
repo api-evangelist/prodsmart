@@ -1,0 +1,116 @@
+{
+  "item": [
+    {
+      "id": "3c6c69a7-d770-4f4f-8f2a-fabe40f51f1e",
+      "name": "Reports",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "0124820c-f0bf-4a68-9b69-752ef415b709",
+          "name": "Worker labor time report",
+          "request": {
+            "name": "Worker labor time report",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v1",
+                "reports",
+                "worker-labor-time"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "351001de-8999-4105-97f4-a0cae0ee3988",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v1",
+                    "reports",
+                    "worker-labor-time"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://fusionoperations.autodesk.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "basic",
+    "basic": [
+      {
+        "key": "username",
+        "value": "{{basicAuthUsername}}"
+      },
+      {
+        "key": "password",
+        "value": "{{basicAuthPassword}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "daab5ad4-573e-4d3a-a505-21e34e66ab9b",
+    "name": "Autodesk Fusion Operations (Prodsmart) API v1 Authorization Reports API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "REST API for Autodesk Fusion Operations (formerly Prodsmart), a cloud manufacturing execution / production management platform for small and mid-sized manufacturers. This v1 surface is documented publicly and is marked DEPRECATED by Autodesk, which recommends migrating to the v2 API on Autodesk Platform Services (APS). Authentication is HTTP Basic (API Key as username, API Secret as password) which mints a 2-hour token; most endpoints also accept an access_token query parameter. Requests and responses are JSON; dates are ISO 8601. Rate limit is 120 requests per minute per company.\n\nContact Support:\n Name: Autodesk Fusion Operations",
+      "type": "text/plain"
+    }
+  }
+}

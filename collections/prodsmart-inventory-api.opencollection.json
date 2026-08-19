@@ -1,0 +1,119 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Autodesk Fusion Operations (Prodsmart) API v1 Authorization Inventory API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Inventory",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Retrieve product inventory",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://fusionoperations.autodesk.com/api/v1/inventory/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve product inventory"
+        },
+        {
+          "info": {
+            "name": "List inventory movements",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://fusionoperations.autodesk.com/api/v1/inventory-movements/"
+          },
+          "docs": "List inventory movements"
+        },
+        {
+          "info": {
+            "name": "Create inventory movement",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://fusionoperations.autodesk.com/api/v1/inventory-movements/"
+          },
+          "docs": "Create inventory movement"
+        },
+        {
+          "info": {
+            "name": "Retrieve inventory movement",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://fusionoperations.autodesk.com/api/v1/inventory-movements/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve inventory movement"
+        },
+        {
+          "info": {
+            "name": "Update inventory movement",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://fusionoperations.autodesk.com/api/v1/inventory-movements/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update inventory movement"
+        },
+        {
+          "info": {
+            "name": "Delete inventory movement",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://fusionoperations.autodesk.com/api/v1/inventory-movements/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete inventory movement"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

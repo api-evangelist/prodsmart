@@ -1,0 +1,101 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Autodesk Fusion Operations (Prodsmart) API v1 Authorization Task Durations API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Task Durations",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List task durations",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://fusionoperations.autodesk.com/api/v1/task-durations/"
+          },
+          "docs": "List task durations"
+        },
+        {
+          "info": {
+            "name": "Create task duration record",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://fusionoperations.autodesk.com/api/v1/task-durations/"
+          },
+          "docs": "Create task duration record"
+        },
+        {
+          "info": {
+            "name": "Retrieve task duration",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://fusionoperations.autodesk.com/api/v1/task-durations/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve task duration"
+        },
+        {
+          "info": {
+            "name": "Update task duration",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://fusionoperations.autodesk.com/api/v1/task-durations/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update task duration"
+        },
+        {
+          "info": {
+            "name": "Delete task duration",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://fusionoperations.autodesk.com/api/v1/task-durations/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete task duration"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

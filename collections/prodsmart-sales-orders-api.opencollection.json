@@ -1,0 +1,206 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Autodesk Fusion Operations (Prodsmart) API v1 Authorization Sales Orders API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Sales Orders",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List sales orders",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://fusionoperations.autodesk.com/api/v1/sales-orders/"
+          },
+          "docs": "List sales orders"
+        },
+        {
+          "info": {
+            "name": "Create sales order",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://fusionoperations.autodesk.com/api/v1/sales-orders/"
+          },
+          "docs": "Create sales order"
+        },
+        {
+          "info": {
+            "name": "Retrieve specific sales order",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://fusionoperations.autodesk.com/api/v1/sales-orders/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve specific sales order"
+        },
+        {
+          "info": {
+            "name": "Update sales order",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://fusionoperations.autodesk.com/api/v1/sales-orders/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update sales order"
+        },
+        {
+          "info": {
+            "name": "Remove sales order",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://fusionoperations.autodesk.com/api/v1/sales-orders/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Remove sales order"
+        },
+        {
+          "info": {
+            "name": "List sales order files",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://fusionoperations.autodesk.com/api/v1/sales-orders/:id/files",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List sales order files"
+        },
+        {
+          "info": {
+            "name": "Create sales order file",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://fusionoperations.autodesk.com/api/v1/sales-orders/:id/files",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Create sales order file"
+        },
+        {
+          "info": {
+            "name": "Retrieve sales order file",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://fusionoperations.autodesk.com/api/v1/sales-orders/:id/files/:file_id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "file_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve sales order file"
+        },
+        {
+          "info": {
+            "name": "Update sales order file",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://fusionoperations.autodesk.com/api/v1/sales-orders/:id/files/:file_id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "file_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update sales order file"
+        },
+        {
+          "info": {
+            "name": "Remove sales order file",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://fusionoperations.autodesk.com/api/v1/sales-orders/:id/files/:file_id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "file_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Remove sales order file"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,242 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Autodesk Fusion Operations (Prodsmart) API v1 Authorization Production Orders API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Production Orders",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List production orders",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://fusionoperations.autodesk.com/api/v1/production-orders/"
+          },
+          "docs": "List production orders"
+        },
+        {
+          "info": {
+            "name": "Create production order",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://fusionoperations.autodesk.com/api/v1/production-orders/"
+          },
+          "docs": "Create production order"
+        },
+        {
+          "info": {
+            "name": "Retrieve production order",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://fusionoperations.autodesk.com/api/v1/production-orders/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve production order"
+        },
+        {
+          "info": {
+            "name": "Update production order",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://fusionoperations.autodesk.com/api/v1/production-orders/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update production order"
+        },
+        {
+          "info": {
+            "name": "Remove production order",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://fusionoperations.autodesk.com/api/v1/production-orders/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Remove production order"
+        },
+        {
+          "info": {
+            "name": "Notify production issue",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://fusionoperations.autodesk.com/api/v1/production-orders/:id/problem",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Notify production issue"
+        },
+        {
+          "info": {
+            "name": "Activate production order",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://fusionoperations.autodesk.com/api/v1/production-orders/:id/activate",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Activate production order"
+        },
+        {
+          "info": {
+            "name": "List production order files",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://fusionoperations.autodesk.com/api/v1/production-orders/:id/files",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List production order files"
+        },
+        {
+          "info": {
+            "name": "Create production order file",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://fusionoperations.autodesk.com/api/v1/production-orders/:id/files",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Create production order file"
+        },
+        {
+          "info": {
+            "name": "Retrieve production order file",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://fusionoperations.autodesk.com/api/v1/production-orders/:id/files/:file_id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "file_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve production order file"
+        },
+        {
+          "info": {
+            "name": "Update production order file",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://fusionoperations.autodesk.com/api/v1/production-orders/:id/files/:file_id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "file_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update production order file"
+        },
+        {
+          "info": {
+            "name": "Remove production order file",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://fusionoperations.autodesk.com/api/v1/production-orders/:id/files/:file_id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "file_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Remove production order file"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

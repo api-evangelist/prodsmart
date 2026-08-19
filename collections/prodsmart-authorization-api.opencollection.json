@@ -1,0 +1,58 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Autodesk Fusion Operations (Prodsmart) API v1 Authorization API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Authorization",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Retrieve authorization token (deprecated)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://fusionoperations.autodesk.com/api/v1/authorization"
+          },
+          "docs": "Retrieve authorization token (deprecated)"
+        },
+        {
+          "info": {
+            "name": "Create new authorization token (deprecated)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://fusionoperations.autodesk.com/api/v1/authorization"
+          },
+          "docs": "Create new authorization token (deprecated)"
+        },
+        {
+          "info": {
+            "name": "Remove authorization (deprecated)",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://fusionoperations.autodesk.com/api/v1/authorization"
+          },
+          "docs": "Remove authorization (deprecated)"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

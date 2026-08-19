@@ -1,0 +1,206 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Autodesk Fusion Operations (Prodsmart) API v1 Authorization Purchase Orders API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Purchase Orders",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List purchase orders",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://fusionoperations.autodesk.com/api/v1/purchase-orders/"
+          },
+          "docs": "List purchase orders"
+        },
+        {
+          "info": {
+            "name": "Create purchase order",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://fusionoperations.autodesk.com/api/v1/purchase-orders/"
+          },
+          "docs": "Create purchase order"
+        },
+        {
+          "info": {
+            "name": "Retrieve purchase order",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://fusionoperations.autodesk.com/api/v1/purchase-orders/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve purchase order"
+        },
+        {
+          "info": {
+            "name": "Update purchase order",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://fusionoperations.autodesk.com/api/v1/purchase-orders/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update purchase order"
+        },
+        {
+          "info": {
+            "name": "Remove purchase order",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://fusionoperations.autodesk.com/api/v1/purchase-orders/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Remove purchase order"
+        },
+        {
+          "info": {
+            "name": "List purchase order files",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://fusionoperations.autodesk.com/api/v1/purchase-orders/:id/files",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List purchase order files"
+        },
+        {
+          "info": {
+            "name": "Create purchase order file",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://fusionoperations.autodesk.com/api/v1/purchase-orders/:id/files",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Create purchase order file"
+        },
+        {
+          "info": {
+            "name": "Retrieve purchase order file",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://fusionoperations.autodesk.com/api/v1/purchase-orders/:id/files/:file_id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "file_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve purchase order file"
+        },
+        {
+          "info": {
+            "name": "Update purchase order file",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://fusionoperations.autodesk.com/api/v1/purchase-orders/:id/files/:file_id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "file_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update purchase order file"
+        },
+        {
+          "info": {
+            "name": "Remove purchase order file",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://fusionoperations.autodesk.com/api/v1/purchase-orders/:id/files/:file_id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "file_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Remove purchase order file"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

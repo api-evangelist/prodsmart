@@ -1,0 +1,36 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Autodesk Fusion Operations (Prodsmart) API v1 Authorization Changes Feed API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Changes Feed",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Access changes feed channels",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://fusionoperations.autodesk.com/api/v1/changes-feed-channels/"
+          },
+          "docs": "Access changes feed channels"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,36 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Autodesk Fusion Operations (Prodsmart) API v1 Authorization Punch Clock API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Punch Clock",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List punch clock entries",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://fusionoperations.autodesk.com/api/v1/punch-clocks/"
+          },
+          "docs": "List punch clock entries"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

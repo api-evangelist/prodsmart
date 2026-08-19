@@ -1,0 +1,36 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Autodesk Fusion Operations (Prodsmart) API v1 Authorization Downtime API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Downtime",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List downtimes",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://fusionoperations.autodesk.com/api/v1/downtimes/"
+          },
+          "docs": "List downtimes"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

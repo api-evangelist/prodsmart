@@ -2,47 +2,52 @@ generated: '2026-07-20'
 method: derived
 status: candidate
 source: openapi/prodsmart-v1-openapi.yml
-notes: >-
-  No official hosted MCP server was found for Autodesk Fusion Operations
-  (Prodsmart). This is a CANDIDATE tool list derived from the documented v1 API
-  operations to seed an MCP server; it is not published by the provider.
+notes: No official hosted MCP server was found for Autodesk Fusion Operations (Prodsmart). This is a CANDIDATE
+  tool list derived from the documented v1 API operations to seed an MCP server; it is not published by
+  the provider.
 server:
   name: prodsmart
   transport: http
 tools:
-  - name: list_products
-    description: List products
-    source_operation: openapi/prodsmart-v1-openapi.yml#listProducts
-  - name: get_product
-    description: Retrieve a product
-    source_operation: openapi/prodsmart-v1-openapi.yml#getProduct
-  - name: create_product
-    description: Create a product
-    source_operation: openapi/prodsmart-v1-openapi.yml#createProduct
-  - name: list_production_orders
-    description: List production orders
-    source_operation: openapi/prodsmart-v1-openapi.yml#listProductionOrders
-  - name: create_production_order
-    description: Create a production order
-    source_operation: openapi/prodsmart-v1-openapi.yml#createProductionOrder
-  - name: activate_production_order
-    description: Activate a production order
-    source_operation: openapi/prodsmart-v1-openapi.yml#activateProductionOrder
-  - name: list_sales_orders
-    description: List sales orders
-    source_operation: openapi/prodsmart-v1-openapi.yml#listSalesOrders
-  - name: create_sales_order
-    description: Create a sales order
-    source_operation: openapi/prodsmart-v1-openapi.yml#createSalesOrder
-  - name: list_purchase_orders
-    description: List purchase orders
-    source_operation: openapi/prodsmart-v1-openapi.yml#listPurchaseOrders
-  - name: get_inventory
-    description: Retrieve product inventory
-    source_operation: openapi/prodsmart-v1-openapi.yml#getInventory
-  - name: create_inventory_movement
-    description: Create an inventory movement
-    source_operation: openapi/prodsmart-v1-openapi.yml#createInventoryMovement
-  - name: list_changes_feed_channels
-    description: Access changes feed channels
-    source_operation: openapi/prodsmart-v1-openapi.yml#listChangesFeedChannels
+- name: list_products
+  description: List products
+  source_operation: openapi/prodsmart-v1-openapi.yml#listProducts
+- name: get_product
+  description: Retrieve a product
+  source_operation: openapi/prodsmart-v1-openapi.yml#getProduct
+- name: create_product
+  description: Create a product
+  source_operation: openapi/prodsmart-v1-openapi.yml#createProduct
+- name: list_production_orders
+  description: List production orders
+  source_operation: openapi/prodsmart-v1-openapi.yml#listProductionOrders
+- name: create_production_order
+  description: Create a production order
+  source_operation: openapi/prodsmart-v1-openapi.yml#createProductionOrder
+- name: activate_production_order
+  description: Activate a production order
+  source_operation: openapi/prodsmart-v1-openapi.yml#activateProductionOrder
+- name: list_sales_orders
+  description: List sales orders
+  source_operation: openapi/prodsmart-v1-openapi.yml#listSalesOrders
+- name: create_sales_order
+  description: Create a sales order
+  source_operation: openapi/prodsmart-v1-openapi.yml#createSalesOrder
+- name: list_purchase_orders
+  description: List purchase orders
+  source_operation: openapi/prodsmart-v1-openapi.yml#listPurchaseOrders
+- name: get_inventory
+  description: Retrieve product inventory
+  source_operation: openapi/prodsmart-v1-openapi.yml#getInventory
+- name: create_inventory_movement
+  description: Create an inventory movement
+  source_operation: openapi/prodsmart-v1-openapi.yml#createInventoryMovement
+- name: list_changes_feed_channels
+  description: Access changes feed channels
+  source_operation: openapi/prodsmart-v1-openapi.yml#listChangesFeedChannels
+deployment:
+  mode: none
+  verified: derived
+  tools: 12
+  checked: '2026-08-12'
+  source: catalog MCP census
