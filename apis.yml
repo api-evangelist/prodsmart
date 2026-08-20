@@ -195,6 +195,8 @@ apis:
   humanURL: https://fusionoperations.autodesk.com/api-documentation
   baseURL: https://fusionoperations.autodesk.com
   tags:
+  - Product
+  tags_raw:
   - Products
   properties:
   - type: OpenAPI
